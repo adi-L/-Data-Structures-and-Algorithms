@@ -38,22 +38,7 @@ Constraints:
 -104 <= nums[i] <= 104
 nums is sorted in a strictly increasing order.
 *******************************************************************************************************************/
-class TreeNode {
-  constructor(key, value = key, parent = null) {
-    this.key = key;
-    this.value = value;
-    this.parent = parent;
-    this.children = [];
-  }
 
-  get isLeaf() {
-    return this.children.length === 0;
-  }
-
-  get hasChildren() {
-    return !this.isLeaf;
-  }
-}
 
 var sortedArrayToBST = function(nums) {
     return traverse(nums,0,nums.length-1);
